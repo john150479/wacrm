@@ -399,8 +399,8 @@ export function MessageBubble({
         className={cn(
           "relative rounded-2xl px-3 py-2",
           isAgent
-            ? "rounded-br-md bg-primary text-primary-foreground"
-            : "rounded-bl-md bg-muted text-foreground",
+            ? "rounded-br-md bg-[#DCF3E6] text-[#0B1B2F] dark:bg-[#0F4A37] dark:text-[#E8F6EE]"
+            : "rounded-bl-md bg-white text-[#0B1B2F] dark:bg-[#16304A] dark:text-[#E6EEF7]",
         )}
       >
         {reply && (

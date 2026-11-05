@@ -243,3 +243,16 @@ html[data-theme="rose"] {
     @apply font-sans;
   }
 }
+html[data-theme="whatsapp"] {
+  --primary: oklch(0.52 0.12 160);
+  --primary-foreground: oklch(0.985 0 0);
+  --primary-hover: oklch(0.46 0.11 160);
+  --primary-soft: oklch(0.52 0.12 160 / 0.12);
+  --primary-soft-2: oklch(0.52 0.12 160 / 0.22);
+  --ring: oklch(0.52 0.12 160);
+  --chart-1: oklch(0.52 0.12 160);
+  --chart-2: oklch(0.68 0.13 175);
+  --sidebar-primary: oklch(0.52 0.12 160);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-ring: oklch(0.52 0.12 160);
+}

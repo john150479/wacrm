@@ -19,11 +19,12 @@ export const THEME_IDS = [
   "cobalt",
   "amber",
   "rose",
+  "whatsapp",
 ] as const;
 
 export type ThemeId = (typeof THEME_IDS)[number];
 
-export const DEFAULT_THEME: ThemeId = "violet";
+export const DEFAULT_THEME: ThemeId = "cobalt";
 
 export const STORAGE_KEY = "wacrm.theme";
 
@@ -96,6 +97,12 @@ export const THEMES: ReadonlyArray<ThemeMeta> = [
     name: "Rose",
     tagline: "Bold and modern — D2C, creator-economy, lifestyle.",
     swatch: "oklch(0.645 0.22 16)",
+  },
+  {
+    id: "whatsapp",
+    name: "WhatsApp",
+    tagline: "WhatsApp green - matches the app your customers message from.",
+    swatch: "oklch(0.52 0.12 160)",
   },
 ];
 
