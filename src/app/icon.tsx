@@ -1,38 +1,21 @@
 import { ImageResponse } from "next/og";
 
-// Jeshureatech bird mark on brand blue. Traced from
-// assets/images/logo.svg on jeshureatech.com. Next.js renders this at
-// build time and auto-injects <link rel="icon"> into <head>.
-//
-// This route takes precedence over src/app/favicon.ico, which is the
-// Next.js default and can stay on disk harmlessly (or be removed).
+// Wordora mark (two chat bubbles, white on the Wordora navy #05101f).
+// Cropped from the logo on jeshureatech.com/whatsapp-crm.html and inlined
+// so the edge runtime needs no file access. Served at /icon — the browser
+// tab icon and the desktop-notification icon both use this route.
 
 export const runtime = "edge";
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
+const WORDORA_ICON =
+  "data:image/png;base64,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";
+
 export default function Icon() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#0e63d6",
-          borderRadius: 6,
-        }}
-      >
-        <svg width="15" height="22" viewBox="0 0 1593 2321" fill="none">
-          <path
-            fill="#ffffff"
-            fillRule="evenodd"
-            d="M913.0,1692.0 L759.0,1896.0 L398.0,2100.0 L322.0,2321.0 L821.0,1955.0ZM827.0,1574.0 L244.0,1778.0 L76.0,1983.0 L298.0,1869.0 L665.0,1717.0ZM977.0,1500.0 L671.0,1780.0 L294.0,1932.0 L0.0,2321.0 L398.0,2033.0 L743.0,1841.0 L895.0,1643.0ZM1251.0,1248.0 L1078.0,1420.0 L1026.0,1547.0 L930.0,1761.0 L1165.0,1506.0 L1285.0,1383.0ZM1279.0,1054.0 L906.0,1360.0 L764.0,1549.0 L901.0,1487.0 L1262.0,1173.0 L1357.0,1383.0 L1397.0,1290.0ZM268.0,1004.0 L384.0,1119.0 L529.0,1123.0 L612.0,1213.0 L825.0,1391.0 L563.0,1012.0ZM1593.0,716.0 L1571.0,696.0 L1539.0,684.0 L1460.0,694.0 L1415.0,680.0 L1388.0,680.0 L1278.0,716.0 L1070.0,817.0 L1141.0,823.0 L1254.0,778.0 L1168.0,866.0 L1145.0,943.0 L1370.0,741.0 L1457.0,721.0 L1384.0,786.0 L1354.0,848.0 L1399.0,951.0 L1417.0,854.0 L1463.0,782.0 L1516.0,735.0 L1556.0,719.0ZM68.0,632.0 L112.0,837.0 L218.0,933.0 L587.0,953.0 L864.0,1349.0 L869.0,1347.0 L897.0,1294.0 L617.0,870.0 L170.0,754.0ZM50.0,314.0 L50.0,531.0 L188.0,691.0 L645.0,819.0 L946.0,1261.0 L1288.0,979.0 L1437.0,1253.0 L1443.0,1126.0 L1305.0,862.0 L954.0,1172.0 L669.0,746.0 L248.0,572.0ZM50.0,0.0 L50.0,221.0 L288.0,525.0 L701.0,701.0 L915.0,1011.0 L817.0,676.0 L356.0,398.0Z"
-          />
-        </svg>
-      </div>
+      <img src={WORDORA_ICON} width={32} height={32} alt="" />
     ),
     { ...size },
   );
